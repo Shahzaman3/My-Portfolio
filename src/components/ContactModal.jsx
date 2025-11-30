@@ -62,12 +62,25 @@ const ContactModal = ({ isOpen, onClose }) => {
                                                 <div className="flex-1 p-8 md:p-10">
                                                       <h3 className="text-3xl font-[anzo1] text-white mb-8 md:hidden">Let's Talk</h3>
 
-                                                      <form className="space-y-6" onSubmit={(e) => e.preventDefault()}>
+                                                      <form className="space-y-6" onSubmit={(e) => {
+                                                            e.preventDefault();
+                                                            const formData = new FormData(e.target);
+                                                            const name = formData.get('name');
+                                                            const email = formData.get('email');
+                                                            const subject = formData.get('subject');
+                                                            const message = formData.get('message');
+
+                                                            const mailtoLink = `mailto:shahzaman.faisal.23@gmail.com?subject=${encodeURIComponent(subject || 'Portfolio Contact')}&body=${encodeURIComponent(`Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`)}`;
+                                                            window.location.href = mailtoLink;
+                                                            onClose();
+                                                      }}>
                                                             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                                                                   <div className="space-y-2">
                                                                         <label className="text-xs text-white/40 uppercase tracking-widest">Name</label>
                                                                         <input
+                                                                              name="name"
                                                                               type="text"
+                                                                              required
                                                                               placeholder="John Doe"
                                                                               className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-white placeholder-white/20 focus:outline-none focus:border-[#ff2239] focus:bg-white/10 transition-all duration-300"
                                                                         />
@@ -75,7 +88,9 @@ const ContactModal = ({ isOpen, onClose }) => {
                                                                   <div className="space-y-2">
                                                                         <label className="text-xs text-white/40 uppercase tracking-widest">Email</label>
                                                                         <input
+                                                                              name="email"
                                                                               type="email"
+                                                                              required
                                                                               placeholder="john@example.com"
                                                                               className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-white placeholder-white/20 focus:outline-none focus:border-[#ff2239] focus:bg-white/10 transition-all duration-300"
                                                                         />
@@ -85,7 +100,9 @@ const ContactModal = ({ isOpen, onClose }) => {
                                                             <div className="space-y-2">
                                                                   <label className="text-xs text-white/40 uppercase tracking-widest">Subject</label>
                                                                   <input
+                                                                        name="subject"
                                                                         type="text"
+                                                                        required
                                                                         placeholder="Project Inquiry"
                                                                         className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-white placeholder-white/20 focus:outline-none focus:border-[#ff2239] focus:bg-white/10 transition-all duration-300"
                                                                   />
@@ -94,6 +111,8 @@ const ContactModal = ({ isOpen, onClose }) => {
                                                             <div className="space-y-2">
                                                                   <label className="text-xs text-white/40 uppercase tracking-widest">Message</label>
                                                                   <textarea
+                                                                        name="message"
+                                                                        required
                                                                         rows={4}
                                                                         placeholder="Tell me about your project..."
                                                                         className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-white placeholder-white/20 focus:outline-none focus:border-[#ff2239] focus:bg-white/10 transition-all duration-300 resize-none"

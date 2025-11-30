@@ -1,16 +1,43 @@
-# React + Vite
+# Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern, high-performance portfolio website built with React, Vite, and Tailwind CSS. This project showcases a premium design with smooth animations and interactive elements.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+-   **Magic Bento Grid**: An interactive, responsive grid layout powered by GSAP for smooth hover effects and particle animations.
+-   **Responsive Design**: Fully optimized for all device sizes, ensuring a seamless experience on mobile, tablet, and desktop.
+-   **Contact Form**: A functional contact modal that integrates with your default email client for quick communication.
+-   **Smooth Animations**: Utilizes Framer Motion and GSAP for fluid page transitions and micro-interactions.
+-   **Modern UI**: Clean, dark-themed aesthetic with glassmorphism and neon accents.
 
-## React Compiler
+## Tech Stack
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+-   **Frontend**: React, Vite
+-   **Styling**: Tailwind CSS
+-   **Animations**: GSAP (GreenSock), Framer Motion
+-   **Icons**: Lucide React
 
-## Expanding the ESLint configuration
+## Getting Started
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+1.  **Clone the repository**:
+    ```bash
+    git clone <repository-url>
+    ```
+2.  **Install dependencies**:
+    ```bash
+    npm install
+    ```
+3.  **Run the development server**:
+    ```bash
+    npm run dev
+    ```
+
+## Project Structure
+
+-   `src/components`: Reusable UI components (MagicBento, ContactModal, Navbar, etc.).
+-   `src/pages`: Page components (Landing, About, Projects, etc.).
+-   `src/assets`: Static assets like images and icons.
+
+## Contact
+
+Feel free to reach out via the contact form on the website or connect with me on social media.

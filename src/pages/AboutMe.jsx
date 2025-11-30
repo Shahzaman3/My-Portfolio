@@ -27,7 +27,7 @@ export default function AboutMe() {
         >
           WHO I AM
         </motion.h2>
-        <div className="w-full h-[600px] md:h-[800px] relative">
+        <div className="w-full h-auto relative">
           <MagicBento
             textAutoHide={true}
             enableStars={true}

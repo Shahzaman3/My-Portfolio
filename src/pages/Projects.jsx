@@ -1,40 +1,39 @@
 import React, { useRef } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { ArrowUpRight, Github, ExternalLink } from "lucide-react";
-// import SectionWrapper from "../components/SectionWrapper";
 
 const projects = [
       {
-            title: "Lumen Finance",
-            description: "A decentralized finance dashboard for tracking assets and analyzing market trends with real-time data visualization.",
-            tags: ["React", "Tailwind", "Recharts", "Web3.js"],
-            link: "#",
-            github: "#",
-            image: "/src/assets/project1.jpg",
+            title: "Arogyata - Web3 Privacy Platform",
+            description: "Arogyata is a full-stack application designed to revolutionize healthcare data privacy using Web3 technology. It empowers patients with control over their medical records while providing institutions with a secure and efficient way to access authorized data.",
+            tags: ["React", "Ether.js", "Tanstack query", "Express.js", "MongoDB"],
+            link: "https://arogyata-final.onrender.com/",
+            github: "https://github.com/Shahzaman3/Arogyata-final",
+            image: "/src/assets/project1.png",
       },
       {
-            title: "Nebula OS",
-            description: "A web-based operating system simulation featuring a window manager, file system, and functional terminal applications.",
-            tags: ["TypeScript", "Next.js", "Framer Motion"],
-            link: "#",
-            github: "#",
-            image: "/src/assets/project2.jpg",
+            title: "LearnMate - AI-Powered Learning Platform",
+            description: "LearnMate is a modern, AI-driven educational platform designed to generate personalized learning roadmaps, quizzes, and career connections. Built with React, TypeScript, and Tailwind CSS, it offers a premium, responsive user experience.",
+            tags: ["TypeScript", "React", "Context API", "Supabase"],
+            link: "https://learn-mate-nu.vercel.app/",
+            github: "https://github.com/Shahzaman3/learnmate",
+            image: "/src/assets/project2.png",
       },
       {
-            title: "Aether Chat",
-            description: "Real-time messaging application with end-to-end encryption, file sharing, and a glassmorphic user interface.",
-            tags: ["Vue", "Firebase", "Socket.io"],
-            link: "#",
-            github: "#",
-            image: "/src/assets/project3.jpg",
+            title: "Hanexis - AutoPrice Pro",
+            description: "Hanexis - AutoPrice Pro is a smarter way to manage prices on Shopify. Automate your pricing strategy and boost sales with our advanced tools.",
+            tags: ["React", "Typescript", "Shadcn UI", "Tailwind"],
+            link: "https://hanexis.vercel.app/",
+            github: "https://github.com/Shahzaman3/hanexis",
+            image: "/src/assets/project3.png",
       },
       {
-            title: "Orbit Commerce",
-            description: "High-performance e-commerce template with 3D product previews and seamless checkout experience.",
-            tags: ["Three.js", "React Three Fiber", "Stripe"],
-            link: "#",
-            github: "#",
-            image: "/src/assets/project4.jpg",
+            title: "ThirtySixStudios Clone",
+            description: "A boutique production studio website built with React, Vite, Tailwind CSS, and GSAP. This project showcases immersive digital assets and experiences with high-performance animations.",
+            tags: ["Canvas", "React", "Tailwind", "GSAP"],
+            link: "https://shahzaman3.github.io/thirtysix/",
+            github: "https://github.com/Shahzaman3/thirtysix",
+            image: "/src/assets/project4.png",
       },
 ];
 
@@ -47,7 +46,7 @@ const ProjectCard = ({ project }) => {
                   <div className="absolute inset-0 bg-gradient-to-br from-[#ff2239]/0 to-[#ff2239]/0 group-hover:from-[#ff2239]/5 group-hover:to-transparent transition-all duration-500" />
 
                   {/* Image Container */}
-                  <div className="w-full h-1/2 md:h-[60%] rounded-xl bg-white/5 relative overflow-hidden group-hover:scale-[1.02] transition-transform duration-500">
+                  <div className="w-full h-auto aspect-video md:aspect-auto md:h-[60%] rounded-xl bg-white/5 relative overflow-hidden group-hover:scale-[1.02] transition-transform duration-500">
                         {project.image ? (
                               <img
                                     src={project.image}
@@ -87,7 +86,7 @@ const ProjectCard = ({ project }) => {
                               </div>
                         </div>
 
-                        <p className="text-white/60 font-[anzo3] text-base md:text-lg leading-relaxed line-clamp-3 md:line-clamp-none">
+                        <p className="hidden md:block text-white/60 font-[anzo3] text-base md:text-lg leading-relaxed line-clamp-3 md:line-clamp-none">
                               {project.description}
                         </p>
 
