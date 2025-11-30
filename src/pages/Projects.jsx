@@ -1,6 +1,10 @@
 import React, { useRef } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { ArrowUpRight, Github, ExternalLink } from "lucide-react";
+import project1 from "../assets/project1.png";
+import project2 from "../assets/project2.png";
+import project3 from "../assets/project3.png";
+import project4 from "../assets/project4.png";
 
 const projects = [
       {
@@ -9,7 +13,7 @@ const projects = [
             tags: ["React", "Ether.js", "Tanstack query", "Express.js", "MongoDB"],
             link: "https://arogyata-final.onrender.com/",
             github: "https://github.com/Shahzaman3/Arogyata-final",
-            image: "/src/assets/project1.png",
+            image: project1,
       },
       {
             title: "LearnMate - AI-Powered Learning Platform",
@@ -17,7 +21,7 @@ const projects = [
             tags: ["TypeScript", "React", "Context API", "Supabase"],
             link: "https://learn-mate-nu.vercel.app/",
             github: "https://github.com/Shahzaman3/learnmate",
-            image: "/src/assets/project2.png",
+            image: project2,
       },
       {
             title: "Hanexis - AutoPrice Pro",
@@ -25,7 +29,7 @@ const projects = [
             tags: ["React", "Typescript", "Shadcn UI", "Tailwind"],
             link: "https://hanexis.vercel.app/",
             github: "https://github.com/Shahzaman3/hanexis",
-            image: "/src/assets/project3.png",
+            image: project3,
       },
       {
             title: "ThirtySixStudios Clone",
@@ -33,7 +37,7 @@ const projects = [
             tags: ["Canvas", "React", "Tailwind", "GSAP"],
             link: "https://shahzaman3.github.io/thirtysix/",
             github: "https://github.com/Shahzaman3/thirtysix",
-            image: "/src/assets/project4.png",
+            image: project4,
       },
 ];
 
